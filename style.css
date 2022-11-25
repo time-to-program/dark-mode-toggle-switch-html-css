@@ -1,0 +1,71 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+  transition: all 1s ease;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #e8e8ec;
+}
+
+h4 {
+  color: #17193F;
+  margin-bottom: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.switch-btn {
+  width: 100px;
+  height: 30px;
+  background-color: #C5CCD3;
+  border: 4px solid #BEC5CC;
+  border-radius: 30px;
+  padding: 6px;
+}
+
+label {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f8f8f9;
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transform: translate(-11px, 19px) rotate(120deg);
+  user-select: none;
+  color: #17193F;
+}
+
+input[type="checkbox"]:checked ~ .switch-btn {
+  border: 4px solid #2e3052;
+  background-color: #7635DC;
+}
+
+input[type="checkbox"]:checked ~ .switch-btn label {
+  transform: translateX(calc(100px - 30px));
+  box-shadow: 0px 3px 5px 0px rgba(0,0,0,0.2);
+}
+
+input[type="checkbox"]:checked ~ .switch-btn label .icons {
+  transform: translateX(-20px);
+}
